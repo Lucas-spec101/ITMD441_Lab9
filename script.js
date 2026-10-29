@@ -2,6 +2,7 @@
 // Lucas Callahan - Lab 7
 
 //Console Test
+/*
 const name = "Ada";
 let labsCompleted = 6;
 let isEnrolled = true;
@@ -11,6 +12,16 @@ let items = 5;
 labsCompleted = labsCompleted + 1;
 console.log(`${name} has completed ${labsCompleted} labs.`);
 console.log(`You have ${items} items.`);
+
+//Test 2
+console.log("1. Starting");
+
+setTimeout(function() {
+  console.log("2. This runs later");
+}, 1000);
+
+console.log("3. This runs immediatly");
+*/
 
 // ----File scripting----
 
