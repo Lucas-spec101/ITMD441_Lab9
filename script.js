@@ -31,9 +31,15 @@ function getGreetingAfterDelay() {
   });
 }
 
-getGreetingAfterDelay().then(function(message) {
+//getGreetingAfterDelay().then(function(message) {
+//  console.log(message);
+//});
+async function showGreeting() {
+  const message = await getGreetingAfterDelay();
   console.log(message);
-});
+}
+
+showGreeting();
 
 // ----File scripting----
 
