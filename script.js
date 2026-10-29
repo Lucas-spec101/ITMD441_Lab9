@@ -91,3 +91,24 @@ goals.forEach(function(goal) {
   item.textContent = goal;
   goalsList.appendChild(item);
 });
+
+//Cat fact button
+const factBtn = document.querySelector("#fact-btn");
+const factDisplay = document.querySelector("#fact-display");
+
+async function loadFact() {
+  factDisplay.textContent = "Loading...";
+  try {
+    const response = await fetch("https://catfact.ninja/fact");
+    if (!response.ok) {
+      throw new Error("Server responded with an error");
+    }
+    const data = await response.json();
+    factDisplay.textContent = data.fact;
+  } catch (error) {
+    factDisplay.textContent = "Couldn't load a fact right now. Try again.";
+    console.error(error);
+  }
+}
+
+factBtn.addEventListener("click", loadFact);
