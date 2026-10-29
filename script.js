@@ -23,6 +23,18 @@ setTimeout(function() {
 console.log("3. This runs immediatly");
 */
 
+function getGreetingAfterDelay() {
+  return new Promise(function(resolve) {
+    setTimeout(function() {
+      resolve("Hello from the future!");
+    }, 800);
+  });
+}
+
+getGreetingAfterDelay().then(function(message) {
+  console.log(message);
+});
+
 // ----File scripting----
 
 //Like Button
